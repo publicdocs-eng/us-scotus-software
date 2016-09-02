@@ -27,6 +27,7 @@ from multiprocessing import Pool
 ## CONSTANTS
 
 _out_header_markdown = Template(u"""---
+title: $fancytitle
 ---
 
 # $fancytitle
