@@ -352,7 +352,7 @@ def process_lines(contents, wd):
                 hh = unicode(l)
                 rps = u''
                 ns = u'uslm'
-                if rid.startswith(u'/us/cfr/') or rid.startswith(u'/us/courts/'):
+                if l.startswith(u'/us/cfr/') or l.startswith(u'/us/courts/'):
                     ns = ns + u'-x'
                 rurl = md_escape(u'https://publicdocs.github.io/go/links?ns=' + ns + u'&' + rps + urllib.urlencode({u'ref' : hh.encode('utf-8')}))
                 linksetmd = linksetmd + u'[' + md_escape(l) + u']: ' + rurl + u'\n'
