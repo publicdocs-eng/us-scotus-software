@@ -344,7 +344,7 @@ def process_lines(contents, wd):
                     rline = rline + u"[" + md_escape(oline[m.start():m.end()]) + u"][" + md_escape(rid) + "]"
                     lastend = m.end()
                 rline = rline + md_escape(oline[lastend:])
-                outlines2.append(rline)
+                outlines2.append(u"\u00A0" * 4 + rline)
 
             linksetmd = u''
             for l in links:
